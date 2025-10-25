@@ -6,13 +6,13 @@ body {
 .navbutton {
     color: whitesmoke;
     background: #02027b;
-    border-color: whitesmoke;
+    border-color: #02027b;
 }
 
 .NavBar {
     background-color: slategray;
     color: whitesmoke;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     list-style-type: none;
 }
