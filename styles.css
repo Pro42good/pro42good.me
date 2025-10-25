@@ -14,4 +14,5 @@ body {
 .navbutton {
     color: whitesmoke;
     background: #02027b;
+    border-color: whitesmoke;
 }
