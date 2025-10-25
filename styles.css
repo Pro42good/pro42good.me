@@ -3,6 +3,12 @@ body {
     color: white;
 }
 
+.navbutton {
+    color: whitesmoke;
+    background: #02027b;
+    border-color: whitesmoke;
+}
+
 .NavBar {
     background-color: slategray;
     color: whitesmoke;
@@ -11,8 +17,3 @@ body {
     list-style-type: none;
 }
 
-.navbutton {
-    color: whitesmoke;
-    background: #02027b;
-    border-color: whitesmoke;
-}
