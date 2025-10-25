@@ -23,8 +23,8 @@ body {
 }
 
 .navbarimg {
-    height: 50%;
-    width: 50%;
+    height: 30%;
+    width: 30%;
 }
 
 .mainbody {
@@ -42,7 +42,7 @@ body {
 }
 
 .NavBar {
-    background-color: black; /* Colors */
+    background-color: #0202dc; /* Colors */
     color: whitesmoke; /* Colors */
     padding: 12px 12px; /* Idk i forgot but important */
     margin: 0; /* Idk i forgot, but its important */
