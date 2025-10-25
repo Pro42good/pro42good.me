@@ -19,7 +19,8 @@ body {
     background: white;
     color: black;
     margin: 0;
-    top: 0;
+    top: 10%;
+    bottom: auto;
     left: 15%;
     right: auto;
     width: 70%;
