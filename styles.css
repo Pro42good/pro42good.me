@@ -7,6 +7,10 @@ body {
     color: whitesmoke;
     background: #02027b;
     border-color: #02027b;
+    border-width: 2px;
+    padding: 5px 5px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .NavBar {
