@@ -15,6 +15,13 @@ body {
     text-decoration: none;
 }
 
+.navbaracc {
+    margin-right: 20px;
+    left: 20px;
+    float: right;
+    display: flex;
+}
+
 .mainbody {
     background: white;
     color: black;
@@ -32,7 +39,7 @@ body {
 .NavBar {
     background-color: slategray; /* Colors */
     color: whitesmoke; /* Colors */
-    padding: 12px; /* Idk i forgot but important */
+    padding: 12px 12px; /* Idk i forgot but important */
     margin: 0; /* Idk i forgot, but its important */
     list-style-type: none; /* Prevents bullets */
     position: fixed; /* Fixes the navbar to the viewport */
