@@ -1,8 +1,8 @@
+/* DONT FILL WITH COMMENTS, goddamn, its 12:30:38 AM i cannot with this css file */
 body {
     background-color: midnightblue;
     color: white;
 }
-
 .navbutton {
     color: whitesmoke;
     background: #02027b;
@@ -10,10 +10,17 @@ body {
 }
 
 .NavBar {
-    background-color: slategray;
-    color: whitesmoke;
-    padding: 20px;
-    margin: 0;
-    list-style-type: none;
+    background-color: slategray; /* Colors */
+    color: whitesmoke; /* Colors */
+    padding: 20px; /* Idk i forgot but important */
+    margin: 0; /* Idk i forgot, but its important */
+    list-style-type: none; /* Prevents bullets */
+    position: fixed; /* Fixes the navbar to the viewport */
+    top: 0;          /* Aligns it to the top */
+    left: 0;         /* Aligns it to the left */
+    right: 0;        /* Aligns it to the right */
+    width: 100%;     /* Ensures it takes full width */
+    /* Add other styling like background-color, z-index, etc. */
+    z-index: 9999;   /* Keeps it above other content */
 }
 
