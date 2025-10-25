@@ -12,7 +12,7 @@ body {
 .NavBar {
     background-color: slategray; /* Colors */
     color: whitesmoke; /* Colors */
-    padding: 20px; /* Idk i forgot but important */
+    padding: 12px; /* Idk i forgot but important */
     margin: 0; /* Idk i forgot, but its important */
     list-style-type: none; /* Prevents bullets */
     position: fixed; /* Fixes the navbar to the viewport */
