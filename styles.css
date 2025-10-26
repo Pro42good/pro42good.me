@@ -10,8 +10,8 @@ body {
 
 .navbutton-nopad {
     color: whitesmoke;
-    background: midnightblue;
-    border-color: midnightblue;
+    background: #0202dc;
+    border-color: #0202dc;
     border-width: 0;
     border-radius: 3px;
     cursor: pointer;
@@ -37,17 +37,16 @@ body {
 .mainbody {
     background: white;
     color: black;
-    margin: 0;
     top: 0;
     bottom: 0;
-    left: 15%;
-    right: auto;
-    width: 70%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80%;
     position: fixed;
     z-index: 0;
     padding: 50px 10px;
 }
-
 .NavBar {
     background-color: midnightblue; /* Colors */
     color: whitesmoke; /* Colors */
