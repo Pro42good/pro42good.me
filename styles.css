@@ -3,12 +3,16 @@ body {
     background-color: midnightblue;
     color: white;
 }
-.navbutton {
+
+.navbarbutton-pad {
+    padding: 5px 20px;
+}
+
+.navbutton-nopad {
     color: whitesmoke;
     background: #02027b;
     border-color: #02027b;
     border-width: 0;
-    padding: 5px 20px;
     border-radius: 3px;
     cursor: pointer;
     display: inline-block;
@@ -16,10 +20,12 @@ body {
 }
 
 .navbaracc {
+    padding: 5px 0;
     margin-right: 20px;
     left: 20px;
     float: right;
     display: flex;
+
 }
 
 .navbarimg {
