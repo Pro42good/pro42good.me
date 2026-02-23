@@ -13,12 +13,12 @@ Hiii!
 
 ### About Pro42good:
 - Programmer
-- Farted while writing this
 - Cyber security researcher
-- C.A.P Baby!
+- C.A.P!
 - US Chair force
 - Social media specialist
 - yuh
+- Fusion 360 certified
 - I break my own code 5 times out of 10.
 
 Pro42good was here.
