@@ -2,10 +2,11 @@
 body {
     background-color: #0202dc;
     color: white;
+    margin: 0;
 }
 
 .navbarbutton-pad {
-    padding: 5px 20px;
+    padding: 3px 14px;
 }
 
 .navbutton-nopad {
@@ -20,8 +21,8 @@ body {
 }
 
 .navbaracc {
-    padding: 5px 0;
-    margin-right: 20px;
+    padding: 2px 0;
+    margin-right: 14px;
     left: 20px;
     float: right;
     display: flex;
@@ -29,8 +30,8 @@ body {
 }
 
 .navbarimg {
-    height: 30%;
-    width: 30%;
+    height: 20px;
+    width: 20px;
     padding-right: 0;
 }
 
@@ -42,15 +43,15 @@ body {
     margin: 0 auto;
     left: 0;
     right: 0;
-    width: 80%;
+    width: 92%;
     position: fixed;
     z-index: 0;
-    padding: 50px 10px 120px;
+    padding: 42px 10px 24px;
 }
 .NavBar {
     background-color: midnightblue; /* Colors */
     color: whitesmoke; /* Colors */
-    padding: 12px 12px; /* Idk i forgot but important */
+    padding: 6px 10px; /* Idk i forgot but important */
     margin: 0; /* Idk i forgot, but its important */
     list-style-type: none; /* Prevents bullets */
     position: fixed; /* Fixes the navbar to the viewport */
@@ -63,16 +64,11 @@ body {
 }
 
 .site-footer {
-    background-color: midnightblue;
-    color: whitesmoke;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 16px;
-    z-index: 9998;
+    border-top: 1px solid #d2d2d2;
+    margin-top: 20px;
+    padding-top: 10px;
     font-size: 0.9rem;
+    color: #1f1f1f;
 }
 
 .site-footer p {
