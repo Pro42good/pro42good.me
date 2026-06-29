@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locked Browser Test - pro42good.me</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">pro42good.me</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="status.html">Status</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="links.html">Links</a>
+        <a href="todo.html">Todo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-box">
+      <p class="eyebrow">locked browser compatibility test</p>
+      <h1>Does your weird browser render basic stuff?</h1>
+      <p>This page does not test with JavaScript. If you can see the blocks below, basic HTML/CSS is probably fine.</p>
+    </section>
+
+    <div class="tool-grid">
+      <section class="side-panel">
+        <h2>Text + Links</h2>
+        <p>Normal text. <strong>Bold text.</strong> <em>Italic text.</em> <a href="#anchor-test">Anchor link</a>.</p>
+      </section>
+
+      <section class="side-panel">
+        <h2>Image</h2>
+        <img class="test-image" src="favicon.ico" alt="Site favicon test image">
+        <p class="fine-print">If you see the favicon above, images work.</p>
+      </section>
+
+      <section class="side-panel">
+        <h2>Form</h2>
+        <form class="test-form" action="compat.html" method="get">
+          <label for="compat-name">Text input</label>
+          <input id="compat-name" name="compat-name" type="text" value="yo">
+          <label for="compat-select">Select</label>
+          <select id="compat-select" name="compat-select">
+            <option>works</option>
+            <option>maybe</option>
+          </select>
+          <button type="submit">Submit test</button>
+        </form>
+      </section>
+
+      <section class="side-panel">
+        <h2>CSS Box</h2>
+        <div class="compat-box">
+          <span>border</span>
+          <span>background</span>
+          <span>padding</span>
+        </div>
+      </section>
+    </div>
+
+    <table class="directory-table" id="anchor-test">
+      <caption>Table test</caption>
+      <thead>
+        <tr>
+          <th scope="col">Feature</th>
+          <th scope="col">Expected</th>
+          <th scope="col">If broken</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Tables</th>
+          <td>Rows and borders line up.</td>
+          <td>Your browser is having a moment.</td>
+        </tr>
+        <tr>
+          <th scope="row">Anchors</th>
+          <td>Jump link lands here.</td>
+          <td>Scroll manually like it is 2004.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="notice-box">
+      <h2>Iframe/object fallback</h2>
+      <object class="fallback-object" data="404.html" type="text/html">
+        Object fallback text: if embedded pages are blocked, you should see this.
+      </object>
+    </section>
+  </main>
+</body>
+</html>
