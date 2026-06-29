@@ -322,6 +322,75 @@ tbody tr:nth-child(even) th {
     margin-bottom: 5px;
 }
 
+.tool-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.columns {
+    columns: 2;
+}
+
+.code-box {
+    background: #f7f9ff;
+    border: 1px solid var(--line);
+    color: #111111;
+    font: 12px "Courier New", Courier, monospace;
+    margin: 0;
+    overflow-x: auto;
+    padding: 9px;
+    white-space: pre;
+}
+
+.test-form {
+    display: grid;
+    gap: 5px;
+}
+
+.test-form input,
+.test-form select,
+.test-form button {
+    border: 1px solid var(--line);
+    font: inherit;
+    padding: 4px;
+}
+
+.test-form button {
+    background: var(--nav-blue);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.test-image {
+    image-rendering: auto;
+    max-width: 32px;
+}
+
+.compat-box {
+    background: #dfe6ff;
+    border: 2px solid var(--line-blue);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+}
+
+.compat-box span {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    padding: 3px 5px;
+}
+
+.fallback-object {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    display: block;
+    height: 160px;
+    width: 100%;
+}
+
 .footer {
     color: #ffffff;
     display: flex;
@@ -349,8 +418,13 @@ tbody tr:nth-child(even) th {
         margin-top: 5px;
     }
 
-    .layout-grid {
+    .layout-grid,
+    .tool-grid {
         grid-template-columns: 1fr;
+    }
+
+    .columns {
+        columns: 1;
     }
 
     .feature-panel .panel-action {
