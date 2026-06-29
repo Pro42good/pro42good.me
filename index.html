@@ -1,43 +1,195 @@
 <!doctype html>
 <html lang="en">
-<meta name="Pro42good's home" content="Pro42good's Home website! Tools, Low quality, fun!" charset="UTF-8">
-  <!--Ah yes beutifull code comments -->
-  
-    <head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pro42good's compact tool hub: projects, links, status, and experiments.">
+  <title>pro42good.me - tool hub</title>
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">pro42good.me</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="https://github.com/Pro42good">GitHub</a>
+        <a href="#projects">Projects</a>
+        <a href="#status">Status</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Head Code -->
-        <link rel="preload" href="styles.css" as="style">
-      <title>Pro42good's home</title>
-    <!-- End Head code -->
+  <main class="page-shell">
+    <section class="intro-box" aria-labelledby="site-title">
+      <p class="eyebrow">public terminal / personal service desk / things that may or may not behave</p>
+      <h1 id="site-title">Pro42good's tool hub</h1>
+      <p>
+        A compact directory for my public projects, useful links, experiments, and status notes.
+        Built plain on purpose: static HTML, regular CSS, and no browser gymnastics.
+      </p>
+    </section>
 
-    </head>
+    <div class="layout-grid">
+      <section class="main-column" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Service Directory</h2>
+          <span>public + collaborator work</span>
+        </div>
 
-    <body>
-    <!-- Need to Load -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- End of need to load -->
+        <article class="feature-panel">
+          <div>
+            <p class="label">primary project</p>
+            <h3>AlloyOS</h3>
+            <p>
+              PostmarketOS-based OS conversion for ARM Chromebooks. The goal:
+              strip corporate bloat, restore native performance, and bring a full Android container
+              to hardware Google left behind.
+            </p>
+          </div>
+          <a class="panel-action" href="https://github.com/Pro42good/AlloyOS">View source</a>
+        </article>
 
-      <!-- Body code -->
-      <ul class="NavBar">
-          <li>
-              <a href="https://pro42good.me" class="navbutton-nopad navbarbutton-pad">Home</a>
-              <a href="https://pro42good.me/slp" class="navbaracc" >
-                  <img class="navbarimg" src="img/icons/user-acc-icon-modified-white.png" alt="Account Info/Sign In icon">
-              </a>
-          </li>
+        <table class="directory-table">
+          <caption>Project links and short notes</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Status</th>
+              <th scope="col">Where</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><a href="https://github.com/Pro42good/AlloyOS">AlloyOS</a></th>
+              <td>OS project</td>
+              <td><span class="status-pill active">alpha</span></td>
+              <td>GitHub</td>
+              <td>ARM Chromebook conversion using postmarketOS, KDE Plasma, and Waydroid ideas.</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="https://github.com/Pro42good/pro42good.me">pro42good.me</a></th>
+              <td>website</td>
+              <td><span class="status-pill active">live</span></td>
+              <td>this site</td>
+              <td>The page you are reading. Small, static, and intentionally low-friction.</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="https://github.com/polardev-ui/disband-latest">Disband latest</a></th>
+              <td>collab app</td>
+              <td><span class="status-pill active">active</span></td>
+              <td><a href="https://disband-latest.vercel.app">web app</a></td>
+              <td>Modern open-source communication platform work in the polardev-ui space.</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="https://github.com/rooootdev/lara">lara</a></th>
+              <td>collab tool</td>
+              <td><span class="status-pill watch">watch</span></td>
+              <td>GitHub</td>
+              <td>iOS toolbox project using the DarkSword exploit family.</td>
+            </tr>
+          </tbody>
+        </table>
 
-      </ul>
-      <div class="mainbody">
-        <h1>Hi</h1>
-        <section class="site-footer">
-          <p><strong>Disclosures</strong></p>
-          <p>This website is designed for a locked down browser environment.</p>
-          <p>Some tools or pages may be experimental and not always available.</p>
-          <p>By using this site, you agree to use content at your own discretion.</p>
+        <div class="notice-box">
+          <h2>Notes From The Desk</h2>
+          <ul>
+            <li>Private repos stay private; this directory only links public source or public deployments.</li>
+            <li>Some tools are experiments. If a link is weird, assume it is under construction before assuming genius.</li>
+            <li>This site is designed to survive restricted browsers and plain static hosting.</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side-column" id="status" aria-label="Status and metadata">
+        <section class="side-panel">
+          <h2>Site Status</h2>
+          <dl class="status-list">
+            <div>
+              <dt>Mode</dt>
+              <dd>Static / GitHub Pages</dd>
+            </div>
+            <div>
+              <dt>Scripts</dt>
+              <dd>None in browser</dd>
+            </div>
+            <div>
+              <dt>Theme</dt>
+              <dd>Retro blue utility</dd>
+            </div>
+          </dl>
         </section>
-      </div>
-      <!-- End Body code -->
-      
-    </body>
 
+        <section class="side-panel">
+          <h2>Project Metadata</h2>
+          <!-- PROJECT_STATUS_START -->
+          <table class="mini-table">
+            <thead>
+              <tr>
+                <th scope="col">Repo</th>
+                <th scope="col">Lang</th>
+                <th scope="col">Pushed</th>
+                <th scope="col">Stars</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AlloyOS</th>
+                <td>Shell</td>
+                <td>fallback</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">pro42good.me</th>
+                <td>CSS</td>
+                <td>fallback</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">disband-latest</th>
+                <td>TypeScript</td>
+                <td>fallback</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">lara</th>
+                <td>Swift</td>
+                <td>fallback</td>
+                <td>1278</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="fine-print">Live deploys replace this block with fresh public GitHub metadata.</p>
+          <!-- PROJECT_STATUS_END -->
+        </section>
+
+        <section class="side-panel">
+          <h2>Quick Links</h2>
+          <ul class="link-list">
+            <li><a href="https://github.com/Pro42good">GitHub profile</a></li>
+            <li><a href="https://github.com/Pro42good/AlloyOS">AlloyOS source</a></li>
+            <li><a href="https://github.com/Pro42good/pro42good.me">Website source</a></li>
+            <li><a href="/404.html">404 test page</a></li>
+          </ul>
+        </section>
+
+        <section class="side-panel disclosures">
+          <h2>Disclosures</h2>
+          <p>This site is designed for locked down browsers.</p>
+          <p>Tools and project pages may be experimental, stale, or temporarily missing.</p>
+          <p>Use anything here with your own good judgment. Tiny print, big responsibility.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>pro42good.me</span>
+    <span>plain HTML, suspiciously blue, updated by GitHub Actions when the stars align.</span>
+  </footer>
+</body>
 </html>
