@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Status - pro42good.me</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">pro42good.me</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="status.html">Status</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="links.html">Links</a>
+        <a href="todo.html">Todo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-box">
+      <p class="eyebrow">status page</p>
+      <h1>Is it working?</h1>
+      <p>Probably. Maybe. Here is the boring table instead of pretending I have a giant status platform.</p>
+    </section>
+
+    <div class="layout-grid">
+      <section class="main-column">
+        <div class="section-head">
+          <h2>Manual Status</h2>
+          <span>human updated, very scientific</span>
+        </div>
+        <table class="directory-table">
+          <caption>Site/service status</caption>
+          <thead>
+            <tr>
+              <th scope="col">Thing</th>
+              <th scope="col">State</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">pro42good.me</th>
+              <td><span class="status-pill active">online</span></td>
+              <td>Static site. If GitHub Pages is alive, this should be alive.</td>
+            </tr>
+            <tr>
+              <th scope="row">AlloyOS</th>
+              <td><span class="status-pill watch">alpha</span></td>
+              <td>Cool, early, and not something I would call finished.</td>
+            </tr>
+            <tr>
+              <th scope="row">Downloads</th>
+              <td><span class="status-pill watch">partial</span></td>
+              <td>Links exist. Real downloadable releases depend on the project.</td>
+            </tr>
+            <tr>
+              <th scope="row">HTML playground</th>
+              <td><span class="status-pill watch">placeholder</span></td>
+              <td>No live preview yet because this site is staying no-JS for now.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="side-column">
+        <section class="side-panel">
+          <h2>Repo Metadata</h2>
+          <!-- PROJECT_STATUS_START -->
+          <table class="mini-table">
+            <thead>
+              <tr>
+                <th scope="col">Repo</th>
+                <th scope="col">Lang</th>
+                <th scope="col">Pushed</th>
+                <th scope="col">Stars</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">AlloyOS</th><td>Shell</td><td>fallback</td><td>0</td></tr>
+              <tr><th scope="row">pro42good.me</th><td>CSS</td><td>fallback</td><td>0</td></tr>
+              <tr><th scope="row">disband-latest</th><td>TypeScript</td><td>fallback</td><td>0</td></tr>
+              <tr><th scope="row">lara</th><td>Swift</td><td>fallback</td><td>1278</td></tr>
+            </tbody>
+          </table>
+          <p class="fine-print">Generated during deploy when the GitHub API cooperates.</p>
+          <!-- PROJECT_STATUS_END -->
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
