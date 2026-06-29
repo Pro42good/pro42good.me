@@ -1,6 +1,6 @@
 # pro42good.me
 
-Retro blue static tool hub for Pro42good projects, links, status notes, and experiments.
+Retro blue static tool hub for Pro42good projects, links, downloads, status notes, and experiments.
 
 ## About
 
@@ -9,6 +9,7 @@ Retro blue static tool hub for Pro42good projects, links, status notes, and expe
 - Designed for locked down browsers.
 - Deployed with GitHub Pages.
 - Public project metadata is generated during the Pages workflow.
+- Separate barebones pages for projects, status, downloads, links, changelog, todo, playground, and browser compatibility testing.
 
 ## Build
 
