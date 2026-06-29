@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pro42good's compact tool hub: projects, links, status, and experiments.">
-  <title>pro42good.me - tool hub</title>
+  <meta name="description" content="Pro42good's barebones site for projects, links, status, and random useful junk.">
+  <title>pro42good.me - home</title>
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico">
@@ -15,92 +15,99 @@
       <a class="brand" href="/">pro42good.me</a>
       <nav class="navlinks" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="https://github.com/Pro42good">GitHub</a>
-        <a href="#projects">Projects</a>
-        <a href="#status">Status</a>
+        <a href="projects.html">Projects</a>
+        <a href="status.html">Status</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="links.html">Links</a>
+        <a href="todo.html">Todo</a>
       </nav>
     </div>
   </header>
 
   <main class="page-shell">
     <section class="intro-box" aria-labelledby="site-title">
-      <p class="eyebrow">public terminal / personal service desk / things that may or may not behave</p>
-      <h1 id="site-title">Pro42good's tool hub</h1>
+      <p class="eyebrow">yo, what's good</p>
+      <h1 id="site-title">Stuff I am working on</h1>
       <p>
-        A compact directory for my public projects, useful links, experiments, and status notes.
-        Built plain on purpose: static HTML, regular CSS, and no browser gymnastics.
+        This is my little website for projects, links, status notes, downloads, and whatever else
+        I end up putting here. It is meant to be barebones. No giant app, no weird browser tricks.
+        If it works, it works.
       </p>
     </section>
 
     <div class="layout-grid">
       <section class="main-column" id="projects" aria-labelledby="projects-title">
         <div class="section-head">
-          <h2 id="projects-title">Service Directory</h2>
-          <span>public + collaborator work</span>
+          <h2 id="projects-title">Main Stuff</h2>
+          <span>public things, mostly</span>
         </div>
 
         <article class="feature-panel">
           <div>
-            <p class="label">primary project</p>
+            <p class="label">main project rn</p>
             <h3>AlloyOS</h3>
             <p>
-              PostmarketOS-based OS conversion for ARM Chromebooks. The goal:
-              strip corporate bloat, restore native performance, and bring a full Android container
-              to hardware Google left behind.
+              A postmarketOS based thing for ARM Chromebooks. The point is pretty simple:
+              make abandoned Chromebook hardware useful again instead of letting it rot.
             </p>
           </div>
-          <a class="panel-action" href="https://github.com/Pro42good/AlloyOS">View source</a>
+          <a class="panel-action" href="https://github.com/Pro42good/AlloyOS">Source</a>
         </article>
 
         <table class="directory-table">
-          <caption>Project links and short notes</caption>
+          <caption>Quick project list</caption>
           <thead>
             <tr>
               <th scope="col">Name</th>
-              <th scope="col">Type</th>
+              <th scope="col">What it is</th>
               <th scope="col">Status</th>
-              <th scope="col">Where</th>
+              <th scope="col">Link</th>
               <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row"><a href="https://github.com/Pro42good/AlloyOS">AlloyOS</a></th>
-              <td>OS project</td>
-              <td><span class="status-pill active">alpha</span></td>
+              <td>Chromebook OS project</td>
+              <td><span class="status-pill watch">alpha</span></td>
               <td>GitHub</td>
-              <td>ARM Chromebook conversion using postmarketOS, KDE Plasma, and Waydroid ideas.</td>
+              <td>Cool idea, still early. Probably do not treat it like magic.</td>
             </tr>
             <tr>
               <th scope="row"><a href="https://github.com/Pro42good/pro42good.me">pro42good.me</a></th>
-              <td>website</td>
+              <td>This website</td>
               <td><span class="status-pill active">live</span></td>
-              <td>this site</td>
-              <td>The page you are reading. Small, static, and intentionally low-friction.</td>
+              <td>Source</td>
+              <td>Barebones HTML/CSS site. That is the point.</td>
             </tr>
             <tr>
               <th scope="row"><a href="https://github.com/polardev-ui/disband-latest">Disband latest</a></th>
-              <td>collab app</td>
+              <td>Collab app</td>
               <td><span class="status-pill active">active</span></td>
-              <td><a href="https://disband-latest.vercel.app">web app</a></td>
-              <td>Modern open-source communication platform work in the polardev-ui space.</td>
+              <td><a href="https://disband-latest.vercel.app">Web app</a></td>
+              <td>Communication app work. Not my whole thing, but I have access/contribute.</td>
             </tr>
             <tr>
               <th scope="row"><a href="https://github.com/rooootdev/lara">lara</a></th>
-              <td>collab tool</td>
+              <td>iOS toolbox</td>
               <td><span class="status-pill watch">watch</span></td>
               <td>GitHub</td>
-              <td>iOS toolbox project using the DarkSword exploit family.</td>
+              <td>Public collab project. Read the repo before assuming anything.</td>
             </tr>
           </tbody>
         </table>
 
         <div class="notice-box">
-          <h2>Notes From The Desk</h2>
-          <ul>
-            <li>Private repos stay private; this directory only links public source or public deployments.</li>
-            <li>Some tools are experiments. If a link is weird, assume it is under construction before assuming genius.</li>
-            <li>This site is designed to survive restricted browsers and plain static hosting.</li>
+          <h2>Pages I added because useful</h2>
+          <ul class="link-list columns">
+            <li><a href="projects.html">Project directory</a></li>
+            <li><a href="status.html">Status page</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="links.html">Link shortcuts</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="todo.html">Public todo</a></li>
+            <li><a href="playground.html">HTML playground</a></li>
+            <li><a href="compat.html">Locked browser test</a></li>
           </ul>
         </div>
       </section>
@@ -114,18 +121,18 @@
               <dd>Static / GitHub Pages</dd>
             </div>
             <div>
-              <dt>Scripts</dt>
-              <dd>None in browser</dd>
+              <dt>JS</dt>
+              <dd>Nope</dd>
             </div>
             <div>
-              <dt>Theme</dt>
-              <dd>Retro blue utility</dd>
+              <dt>Vibe</dt>
+              <dd>Blue, blunt, barebones</dd>
             </div>
           </dl>
         </section>
 
         <section class="side-panel">
-          <h2>Project Metadata</h2>
+          <h2>Repo Metadata</h2>
           <!-- PROJECT_STATUS_START -->
           <table class="mini-table">
             <thead>
@@ -163,25 +170,25 @@
               </tr>
             </tbody>
           </table>
-          <p class="fine-print">Live deploys replace this block with fresh public GitHub metadata.</p>
+          <p class="fine-print">Updated during deploy if GitHub lets the workflow do its thing.</p>
           <!-- PROJECT_STATUS_END -->
         </section>
 
         <section class="side-panel">
-          <h2>Quick Links</h2>
+          <h2>Shortcuts</h2>
           <ul class="link-list">
             <li><a href="https://github.com/Pro42good">GitHub profile</a></li>
-            <li><a href="https://github.com/Pro42good/AlloyOS">AlloyOS source</a></li>
-            <li><a href="https://github.com/Pro42good/pro42good.me">Website source</a></li>
-            <li><a href="/404.html">404 test page</a></li>
+            <li><a href="projects.html">All projects</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="compat.html">Browser test</a></li>
           </ul>
         </section>
 
         <section class="side-panel disclosures">
-          <h2>Disclosures</h2>
-          <p>This site is designed for locked down browsers.</p>
-          <p>Tools and project pages may be experimental, stale, or temporarily missing.</p>
-          <p>Use anything here with your own good judgment. Tiny print, big responsibility.</p>
+          <h2>Disclaimers</h2>
+          <p>Some stuff here might be broken. That is not a feature, that is just reality.</p>
+          <p>Private repos stay private. Public pages only list public things.</p>
+          <p>Use your own judgment. I am not your package manager.</p>
         </section>
       </aside>
     </div>
@@ -189,7 +196,7 @@
 
   <footer class="footer">
     <span>pro42good.me</span>
-    <span>plain HTML, suspiciously blue, updated by GitHub Actions when the stars align.</span>
+    <span>plain HTML, very blue, no browser-side API nonsense.</span>
   </footer>
 </body>
 </html>
