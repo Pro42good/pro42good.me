@@ -30,6 +30,8 @@ SKIP_FILES = {
 }
 START = "<!-- PROJECT_STATUS_START -->"
 END = "<!-- PROJECT_STATUS_END -->"
+CHANGELOG_START = "<!-- PROJECT_CHANGELOG_START -->"
+CHANGELOG_END = "<!-- PROJECT_CHANGELOG_END -->"
 
 
 def copy_static_site():
@@ -131,16 +133,55 @@ def render_status(rows, generated_note):
     )
 
 
-def inject_status(rows, generated_note):
-    index_path = OUT / "index.html"
-    content = index_path.read_text(encoding="utf-8")
-    before, marker, rest = content.partition(START)
+def render_changelog(rows, generated_note):
+    body_rows = []
+    for row in rows:
+        body_rows.append(
+            "          <tr>\n"
+            f"            <th scope=\"row\">{html.escape(row['name'])}</th>\n"
+            f"            <td>{html.escape(row['pushed_at'])}</td>\n"
+            f"            <td>{html.escape(row['language'])}</td>\n"
+            "          </tr>"
+        )
+
+    return (
+        f"{CHANGELOG_START}\n"
+        "      <table class=\"mini-table\">\n"
+        "        <thead>\n"
+        "          <tr>\n"
+        "            <th scope=\"col\">Repo</th>\n"
+        "            <th scope=\"col\">Last push</th>\n"
+        "            <th scope=\"col\">Language</th>\n"
+        "          </tr>\n"
+        "        </thead>\n"
+        "        <tbody>\n"
+        + "\n".join(body_rows)
+        + "\n"
+        "        </tbody>\n"
+        "      </table>\n"
+        f"      <p class=\"fine-print\">{html.escape(generated_note)}</p>\n"
+        f"      {CHANGELOG_END}"
+    )
+
+
+def replace_between(content, start, end, replacement):
+    before, marker, rest = content.partition(start)
     if not marker:
-        raise RuntimeError("Missing PROJECT_STATUS_START marker in index.html")
-    _old, marker, after = rest.partition(END)
+        return content
+    _old, marker, after = rest.partition(end)
     if not marker:
-        raise RuntimeError("Missing PROJECT_STATUS_END marker in index.html")
-    index_path.write_text(before + render_status(rows, generated_note) + after, encoding="utf-8")
+        raise RuntimeError(f"Missing end marker for {start}")
+    return before + replacement + after
+
+
+def inject_generated_blocks(rows, generated_note):
+    status_block = render_status(rows, generated_note)
+    changelog_block = render_changelog(rows, generated_note)
+    for html_path in OUT.glob("*.html"):
+        content = html_path.read_text(encoding="utf-8")
+        content = replace_between(content, START, END, status_block)
+        content = replace_between(content, CHANGELOG_START, CHANGELOG_END, changelog_block)
+        html_path.write_text(content, encoding="utf-8")
 
 
 def main():
@@ -152,7 +193,7 @@ def main():
         rows = fallback_rows()
         generated_note = f"GitHub metadata fetch failed; using fallback status. Reason: {exc}"
         print(generated_note, file=sys.stderr)
-    inject_status(rows, generated_note)
+    inject_generated_blocks(rows, generated_note)
     print(f"Built {OUT}")
 
 
